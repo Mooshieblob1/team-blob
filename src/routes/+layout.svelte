@@ -1,8 +1,11 @@
 <script lang="ts">
 	import '../app.css';
 	import { showOnScrollToBottom } from '$lib/actions/showOnScrollToBottom';
+	import { animate } from 'motion';
+	import { tick } from 'svelte';
 
 	let mobileMenuOpen = false;
+	let mobileMenuRef: HTMLDivElement | null = null;
 
 	const blobMessages = [
 		"She's probably inting.",
@@ -18,6 +21,19 @@
 	];
 
 	const randomMsg = blobMessages[Math.floor(Math.random() * blobMessages.length)];
+
+	// Animate mobile menu opening
+	$: if (mobileMenuOpen) {
+		tick().then(() => {
+			if (mobileMenuRef) {
+				animate(
+					mobileMenuRef,
+					{ opacity: [0, 1], y: [-20, 0] },
+					{ duration: 0.3, easing: 'ease-out' }
+				);
+			}
+		});
+	}
 </script>
 
 <div class="min-h-screen bg-black text-white flex flex-col">
@@ -72,7 +88,10 @@
 
 		<!-- Mobile dropdown menu -->
 		{#if mobileMenuOpen}
-			<div class="lg:hidden flex flex-col items-center space-y-4 pb-4">
+			<div
+				bind:this={mobileMenuRef}
+				class="lg:hidden flex flex-col items-center space-y-4 pb-4 opacity-0"
+			>
 				<a href="/" class="hover:text-yellow-400 transition">Home</a>
 				<a href="/roster" class="hover:text-yellow-400 transition">Roster</a>
 				<a href="/schedule" class="hover:text-yellow-400 transition">Schedule</a>
@@ -91,7 +110,7 @@
 			</div>
 		{/if}
 
-		<!-- Live banner -->
+		<!-- Live banner (no animation applied) -->
 		<div
 			class="bg-blob text-yellow-400 py-2 px-4 flex items-center justify-center gap-2 text-sm font-semibold"
 		>
