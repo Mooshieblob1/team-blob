@@ -13,7 +13,7 @@ This project is a frontend showcase and playground, simulating a professional es
 
 ## 📸 Preview
 
-![Team Blob Screenshot](screenshot.png)
+![Team Blob Screenshot](/screenshot.png)
 
 ---
 
