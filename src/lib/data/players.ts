@@ -56,7 +56,7 @@ export const players = [
 	},
 	{
 		name: 'Morb',
-		role: 'Sub/Top',
+		role: 'Sub/Mid',
 		region: 'JP', // 🇯🇵 jp.png
 		image: '/images/morb.png',
 		stats: {
