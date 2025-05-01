@@ -2,6 +2,8 @@
 	import '../app.css';
 	import { showOnScrollToBottom } from '$lib/actions/showOnScrollToBottom';
 
+	let mobileMenuOpen = false;
+
 	const blobMessages = [
 		"She's probably inting.",
 		'She forgot to buy boots!',
@@ -27,27 +29,65 @@
 				<img src="/team-blob-logo.png" class="h-12 w-auto" alt="Team Blob Logo" />
 				<span class="text-yellow-400 text-xl font-bold">Team Blob</span>
 
-				<!-- Sponsors with clickable logos -->
-				<div class="flex items-center pl-4 border-l border-gray-700 space-x-3">
+				<!-- Desktop sponsors -->
+				<div class="hidden lg:flex items-center pl-4 border-l border-gray-700 space-x-3">
 					<span class="text-xs text-gray-400 uppercase font-semibold">Sponsored by</span>
-
 					<a href="https://legitcorp.com/" target="_blank" rel="noopener noreferrer">
 						<img src="/sponsors/legitcorp.png" alt="LegitCorp" class="h-6 w-auto" />
 					</a>
-
 					<a href="https://axisorder.com" target="_blank" rel="noopener noreferrer">
 						<img src="/sponsors/axis-order.png" alt="Axis Order" class="h-6 w-auto" />
 					</a>
 				</div>
 			</div>
 
-			<div class="space-x-6">
+			<!-- Desktop nav -->
+			<div class="hidden lg:flex space-x-6">
 				<a href="/" class="hover:text-yellow-400 transition">Home</a>
 				<a href="/roster" class="hover:text-yellow-400 transition">Roster</a>
 				<a href="/schedule" class="hover:text-yellow-400 transition">Schedule</a>
 				<a href="/news" class="hover:text-yellow-400 transition">News</a>
 			</div>
+
+			<!-- Mobile menu button -->
+			<button class="lg:hidden text-white" on:click={() => (mobileMenuOpen = !mobileMenuOpen)}>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					class="h-6 w-6"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke="currentColor"
+				>
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="M4 6h16M4 12h16M4 18h16"
+					/>
+				</svg>
+			</button>
 		</nav>
+
+		<!-- Mobile dropdown menu -->
+		{#if mobileMenuOpen}
+			<div class="lg:hidden flex flex-col items-center space-y-4 pb-4">
+				<a href="/" class="hover:text-yellow-400 transition">Home</a>
+				<a href="/roster" class="hover:text-yellow-400 transition">Roster</a>
+				<a href="/schedule" class="hover:text-yellow-400 transition">Schedule</a>
+				<a href="/news" class="hover:text-yellow-400 transition">News</a>
+
+				<!-- Mobile sponsors -->
+				<div class="flex items-center space-x-3 pt-2 border-t border-gray-700">
+					<span class="text-xs text-gray-400 uppercase font-semibold">Sponsored by</span>
+					<a href="https://legitcorp.com/" target="_blank" rel="noopener noreferrer">
+						<img src="/sponsors/legitcorp.png" alt="LegitCorp" class="h-6 w-auto" />
+					</a>
+					<a href="https://axisorder.com" target="_blank" rel="noopener noreferrer">
+						<img src="/sponsors/axis-order.png" alt="Axis Order" class="h-6 w-auto" />
+					</a>
+				</div>
+			</div>
+		{/if}
 
 		<!-- Live banner -->
 		<div
@@ -65,7 +105,7 @@
 	</div>
 
 	<!-- Main page content -->
-	<main class="pt-[7.5rem] flex-grow">
+	<main class="pt-[10.5rem] lg:pt-[7.5rem] flex-grow">
 		<slot />
 	</main>
 
