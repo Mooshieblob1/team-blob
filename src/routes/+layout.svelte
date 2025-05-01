@@ -26,7 +26,7 @@
 
 	async function typeWriterLoop() {
 		while (true) {
-			// Pick a random message that isn't the current one
+			// Picks a random message that isn't the current one
 			let next;
 			do {
 				next = blobMessages[Math.floor(Math.random() * blobMessages.length)];
