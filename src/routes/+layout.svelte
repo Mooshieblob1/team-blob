@@ -26,8 +26,10 @@
 		<!-- Navbar -->
 		<nav class="flex items-center justify-between px-6 py-4">
 			<div class="flex items-center space-x-4">
-				<img src="/team-blob-logo.png" class="h-12 w-auto" alt="Team Blob Logo" />
-				<span class="text-yellow-400 text-xl font-bold">Team Blob</span>
+				<a href="/" class="flex items-center space-x-2 hover:opacity-80 transition">
+					<img src="/team-blob-logo.png" class="h-12 w-auto" alt="Team Blob Logo" />
+					<span class="text-yellow-400 text-xl font-bold">Team Blob</span>
+				</a>
 
 				<!-- Desktop sponsors -->
 				<div class="hidden lg:flex items-center pl-4 border-l border-gray-700 space-x-3">
