@@ -20,7 +20,41 @@
 		'Streaming with 2 viewers and 10 deaths!'
 	];
 
-	const randomMsg = blobMessages[Math.floor(Math.random() * blobMessages.length)];
+	let typedMsg = '';
+	let currentMessage = '';
+	let typing = false;
+
+	async function typeWriterLoop() {
+		while (true) {
+			// Pick a random message that isn't the current one
+			let next;
+			do {
+				next = blobMessages[Math.floor(Math.random() * blobMessages.length)];
+			} while (next === currentMessage);
+
+			currentMessage = next;
+
+			// Type forward
+			for (let i = 1; i <= currentMessage.length; i++) {
+				typedMsg = currentMessage.slice(0, i);
+				await new Promise((r) => setTimeout(r, 35));
+			}
+
+			// Hold the message
+			await new Promise((r) => setTimeout(r, 2000));
+
+			// Backspace
+			for (let i = currentMessage.length; i >= 0; i--) {
+				typedMsg = currentMessage.slice(0, i);
+				await new Promise((r) => setTimeout(r, 20));
+			}
+
+			// Small pause before next one
+			await new Promise((r) => setTimeout(r, 300));
+		}
+	}
+
+	typeWriterLoop();
 
 	// Animate mobile menu opening
 	$: if (mobileMenuOpen) {
@@ -110,7 +144,7 @@
 			</div>
 		{/if}
 
-		<!-- Live banner (no animation applied) -->
+		<!-- Live banner with typing effect -->
 		<div
 			class="bg-blob text-yellow-400 py-2 px-4 flex items-center justify-center gap-2 text-sm font-semibold"
 		>
@@ -120,7 +154,7 @@
 				class="w-6 h-6 rounded-full object-cover border border-black"
 			/>
 			<span class="uppercase tracking-wide">Blob is currently live in solo queue</span>
-			<span class="text-xs italic ml-2">({randomMsg})</span>
+			<span class="text-xs italic ml-2">({typedMsg})</span>
 			<span class="animate-ping w-2 h-2 bg-red-500 rounded-full ml-2"></span>
 		</div>
 	</div>
