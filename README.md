@@ -1,38 +1,58 @@
-# sv
+# 🐸 Team Blob — Fake Esports Team Website
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Welcome to the **official fake website** of Team Blob — a satirical, lovingly overbuilt esports team site built with ⚡ **Svelte** and 🎨 **Tailwind CSS v4**.
 
-## Creating a project
+This project is a frontend showcase and playground, simulating a professional esports org site while being... very not real.
 
-If you're seeing this, you've probably already done this step. Congrats!
+---
+
+## 📦 Tech Stack
+
+- **Svelte** — Lightweight, fast, reactive.
+- **Tailwind CSS v4** — Utility-first styling, customized for the dark theme.
+- **TypeScript** — For strong typing and future-proofing.
+- **Vercel** — Hosting the whole fake operation.
+
+---
+
+## 🧱 Site Structure
+
+- **Navbar**: Sticky at the top. Includes team branding and fake sponsors.
+- **Live Banner**: Shows Blob as “currently live in solo queue” with rotating messages.
+- **Main Content**: Dynamic content slot per route.
+- **Footer**: Only appears when you scroll to the bottom — says _"Yes this is clearly a fake team."_ 😊
+
+---
+
+## 🤝 Sponsors (Fake, but Clickable)
+
+- [LegitCorp](https://legitcorp.com/) ![LegitCorp Logo](/static/sponsors/legitcorp.png)
+- [Axis Order](https://axisorder.com) ![Axis Order Logo](/static/sponsors/axis-order.png)
+
+Logos are displayed in the navbar next to the team name, fully clickable, and styled for maximum esports realism.
+
+---
+
+## 🎭 Features
+
+- ✅ Scroll-to-bottom reveal footer
+- ✅ Randomized live banner messages
+- ✅ Sponsor logo integration with external links
+- ✅ Fully responsive layout
+- ✅ Parody tone, professional layout
+
+---
+
+## 🗂 Folder Structure (Key Files)
 
 ```bash
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+src/
+├── routes/
+│   └── +layout.svelte       # Main layout with nav, banner, footer
+├── lib/
+│   └── actions/
+│       └── showOnScrollToBottom.ts  # Scroll-triggered footer visibility
+static/
+└── sponsors/
+    ├── legitcorp.png
+    └── axis-order.png
