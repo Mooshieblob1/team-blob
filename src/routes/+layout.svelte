@@ -1,5 +1,6 @@
 <script lang="ts">
 	import '../app.css';
+	import { showOnScrollToBottom } from '$lib/actions/showOnScrollToBottom';
 
 	const blobMessages = [
 		"She's probably inting.",
@@ -17,14 +18,27 @@
 	const randomMsg = blobMessages[Math.floor(Math.random() * blobMessages.length)];
 </script>
 
-<div class="min-h-screen bg-black text-white">
+<div class="min-h-screen bg-black text-white flex flex-col">
 	<!-- Fixed top: nav + banner -->
 	<div class="fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur shadow-md">
 		<!-- Navbar -->
 		<nav class="flex items-center justify-between px-6 py-4">
-			<div class="flex items-center space-x-3">
+			<div class="flex items-center space-x-4">
 				<img src="/team-blob-logo.png" class="h-12 w-auto" alt="Team Blob Logo" />
 				<span class="text-yellow-400 text-xl font-bold">Team Blob</span>
+
+				<!-- Sponsors with clickable logos -->
+				<div class="flex items-center pl-4 border-l border-gray-700 space-x-3">
+					<span class="text-xs text-gray-400 uppercase font-semibold">Sponsored by</span>
+
+					<a href="https://legitcorp.com/" target="_blank" rel="noopener noreferrer">
+						<img src="/sponsors/legitcorp.png" alt="LegitCorp" class="h-6 w-auto" />
+					</a>
+
+					<a href="https://axisorder.com" target="_blank" rel="noopener noreferrer">
+						<img src="/sponsors/axis-order.png" alt="Axis Order" class="h-6 w-auto" />
+					</a>
+				</div>
 			</div>
 
 			<div class="space-x-6">
@@ -50,8 +64,16 @@
 		</div>
 	</div>
 
-	<!-- Main page content will render here -->
-	<main class="pt-[7.5rem]">
+	<!-- Main page content -->
+	<main class="pt-[7.5rem] flex-grow">
 		<slot />
 	</main>
+
+	<!-- Footer shown only at bottom -->
+	<footer
+		class="w-full text-center text-sm text-gray-400 py-4 opacity-0 transition-opacity duration-300"
+		use:showOnScrollToBottom
+	>
+		Yes this is clearly a fake team
+	</footer>
 </div>
