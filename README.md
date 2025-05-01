@@ -1,8 +1,19 @@
 # 🐸 Team Blob — Fake Esports Team Website
 
+[![Deployed on Vercel](https://img.shields.io/badge/deployed-Vercel-black?logo=vercel&style=flat)](https://team-blob.vercel.app)
+[![Built with Svelte](https://img.shields.io/badge/built%20with-Svelte-orange?logo=svelte&logoColor=white&style=flat)](https://svelte.dev)
+[![Tailwind CSS](https://img.shields.io/badge/styled%20with-TailwindCSS-38bdf8?logo=tailwindcss&logoColor=white&style=flat)](https://tailwindcss.com)
+[![TypeScript](https://img.shields.io/badge/code-TypeScript-3178c6?logo=typescript&logoColor=white&style=flat)](https://www.typescriptlang.org/)
+
 Welcome to the **official fake website** of Team Blob — a satirical, lovingly overbuilt esports team site built with ⚡ **Svelte** and 🎨 **Tailwind CSS v4**.
 
 This project is a frontend showcase and playground, simulating a professional esports org site while being... very not real.
+
+---
+
+## 📸 Preview
+
+![Team Blob Screenshot](screenshot.png)
 
 ---
 
@@ -36,7 +47,8 @@ Logos are displayed in the navbar next to the team name, fully clickable, and st
 ## 🎭 Features
 
 - ✅ Scroll-to-bottom reveal footer
-- ✅ Randomized live banner messages
+- ✅ Rotating live banner messages with animated typewriter effect
+- ✅ Animated mobile dropdown menu (slide down on open)
 - ✅ Sponsor logo integration with external links
 - ✅ Fully responsive layout
 - ✅ Parody tone, professional layout
@@ -56,3 +68,4 @@ static/
 └── sponsors/
     ├── legitcorp.png
     └── axis-order.png
+```
