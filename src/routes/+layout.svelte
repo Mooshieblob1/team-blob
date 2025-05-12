@@ -98,6 +98,10 @@
 					<a href="https://gpu.garden" target="_blank" rel="noopener noreferrer">
 						<img src="/sponsors/gpugarden.png" alt="gpu.garden" class="h-10 w-auto" />
 					</a>
+
+					<a href="https://mooshieblob.com" target="_blank" rel="noopener noreferrer">
+						<img src="/sponsors/mooshieblob.png" alt="Mooshieblob" class="h-11 w-auto" />
+					</a>
 				</div>
 			</div>
 
