@@ -95,6 +95,9 @@
 					<a href="https://axisorder.com" target="_blank" rel="noopener noreferrer">
 						<img src="/sponsors/axis-order.png" alt="Axis Order" class="h-6 w-auto" />
 					</a>
+					<a href="https://gpu.garden" target="_blank" rel="noopener noreferrer">
+						<img src="/sponsors/gpugarden.png" alt="gpu.garden" class="h-10 w-auto" />
+					</a>
 				</div>
 			</div>
 
