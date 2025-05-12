@@ -72,6 +72,7 @@
 	}
 
 	injectSpeedInsights();
+	injectAnalytics();
 </script>
 
 <div class="min-h-screen bg-black text-white flex flex-col">
