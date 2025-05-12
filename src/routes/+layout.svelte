@@ -1,5 +1,6 @@
 <script lang="ts">
 	import '../app.css';
+	import { injectAnalytics } from '@vercel/analytics/sveltekit';
 	import { showOnScrollToBottom } from '$lib/actions/showOnScrollToBottom';
 	import { animate } from 'motion';
 	import { tick } from 'svelte';
