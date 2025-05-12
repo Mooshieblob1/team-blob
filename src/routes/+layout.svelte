@@ -1,6 +1,7 @@
 <script lang="ts">
 	import '../app.css';
 	import { injectAnalytics } from '@vercel/analytics/sveltekit';
+	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
 	import { showOnScrollToBottom } from '$lib/actions/showOnScrollToBottom';
 	import { animate } from 'motion';
 	import { tick } from 'svelte';
@@ -69,6 +70,8 @@
 			}
 		});
 	}
+
+	injectSpeedInsights();
 </script>
 
 <div class="min-h-screen bg-black text-white flex flex-col">
