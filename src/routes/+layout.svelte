@@ -90,10 +90,10 @@
 				<div class="hidden lg:flex items-center pl-4 border-l border-gray-700 space-x-3">
 					<span class="text-xs text-gray-400 uppercase font-semibold">Sponsored by</span>
 					<a href="https://legitcorp.com/" target="_blank" rel="noopener noreferrer">
-						<img src="/sponsors/legitcorp.png" alt="LegitCorp" class="h-6 w-auto" />
+						<img src="/sponsors/legitcorp.png" alt="LegitCorp" class="h-7 w-auto" />
 					</a>
 					<a href="https://axisorder.com" target="_blank" rel="noopener noreferrer">
-						<img src="/sponsors/axis-order.png" alt="Axis Order" class="h-6 w-auto" />
+						<img src="/sponsors/axis-order.png" alt="Axis Order" class="h-7 w-auto" />
 					</a>
 					<a href="https://gpu.garden" target="_blank" rel="noopener noreferrer">
 						<img src="/sponsors/gpugarden.png" alt="gpu.garden" class="h-10 w-auto" />
@@ -101,6 +101,9 @@
 
 					<a href="https://mooshieblob.com" target="_blank" rel="noopener noreferrer">
 						<img src="/sponsors/mooshieblob.png" alt="Mooshieblob" class="h-11 w-auto" />
+					</a>
+					<a href="https://safe.aibooru.online" target="_blank" rel="noopener noreferrer">
+						<img src="/sponsors/aibooru.png" alt="AIBooru" class="h-11 w-auto" />
 					</a>
 				</div>
 			</div>
