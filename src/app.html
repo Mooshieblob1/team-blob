@@ -2,8 +2,51 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="theme-color" content="#facc15" />
+		<meta name="color-scheme" content="light only" />
+
+		<!-- SEO -->
+		<title>Team Blob — League of Legends Esports Fan Site</title>
+		<meta name="title" content="Team Blob — League of Legends Esports Fan Site" />
+		<meta
+			name="description"
+			content="Follow Team Blob's journey through the Rift. Stats, news, memes, and more from your favorite fake LoL team!"
+		/>
+
+		<!-- Open Graph -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://team-blob.mooshieblob.com/" />
+		<meta property="og:title" content="Team Blob — League of Legends Esports Fan Site" />
+		<meta
+			property="og:description"
+			content="Follow Team Blob's journey through the Rift. Stats, news, memes, and more from your favorite fake LoL team!"
+		/>
+		<meta property="og:image" content="/team-blob-logo.png" />
+
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:url" content="https://team-blob.mooshieblob.com/" />
+		<meta name="twitter:title" content="Team Blob — League of Legends Esports Fan Site" />
+		<meta
+			name="twitter:description"
+			content="Follow Team Blob's journey through the Rift. Stats, news, memes, and more from your favorite fake LoL team!"
+		/>
+		<meta name="twitter:image" content="/team-blob-logo.png" />
+
+		<!-- Favicons + Manifest -->
+		<link rel="icon" href="%sveltekit.assets%/favicon.png" sizes="32x32" type="image/png" />
+		<link rel="apple-touch-icon" href="/team-blob-logo.png" />
+		<link rel="manifest" href="/site.webmanifest" />
+
+		<!-- iOS Web App -->
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="apple-mobile-web-app-title" content="Team Blob" />
+
+		<!-- Preload -->
+		<link rel="preload" as="image" href="/team-blob-logo.png" />
+
 		%sveltekit.head%
 	</head>
 	<body data-sveltekit-preload-data="hover">

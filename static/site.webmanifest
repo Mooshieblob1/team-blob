@@ -1,0 +1,15 @@
+{
+	"name": "Team Blob",
+	"short_name": "TeamBlob",
+	"start_url": "/",
+	"display": "standalone",
+	"background_color": "#facc15",
+	"theme_color": "#facc15",
+	"icons": [
+		{
+			"src": "/team-blob-logo.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	]
+}
